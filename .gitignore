@@ -1,0 +1,247 @@
+# ─────────────────────────────────────────────────────────────
+# Python
+# ─────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+*.manifest
+*.spec
+
+# ─────────────────────────────────────────────────────────────
+# Virtual Environment
+# ─────────────────────────────────────────────────────────────
+.venv/
+venv/
+ENV/
+env/
+.env/
+.venv.local
+venv.bak/
+
+# ─────────────────────────────────────────────────────────────
+# IDEs
+# ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.idea/
+*.iml
+.project
+.pydevproject
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# ─────────────────────────────────────────────────────────────
+# MLflow
+# ─────────────────────────────────────────────────────────────
+mlruns/
+mlflow.db
+mlflow.db.bak
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.db.bak
+
+# ─────────────────────────────────────────────────────────────
+# Pipeline
+# ─────────────────────────────────────────────────────────────
+pipeline/mlruns/
+pipeline/*.db
+pipeline/*.db.bak
+pipeline/*.db-journal
+pipeline/*.db-shm
+pipeline/*.db-wal
+pipeline/.mlflow/
+pipeline/mlflow_trip_duration.db
+pipeline/mlflow_trip_duration.db.bak
+
+# ─────────────────────────────────────────────────────────────
+# Batch
+# ─────────────────────────────────────────────────────────────
+batch/batch_results.db
+batch/batch_results.db.bak
+batch/drift_reports/
+batch/predictions/
+batch/*.parquet
+batch/*.html
+batch/*.json
+batch/__pycache__/
+
+# ─────────────────────────────────────────────────────────────
+# Monitoring
+# ─────────────────────────────────────────────────────────────
+prometheus_data/
+grafana_data/
+monitoring/prometheus/data/
+monitoring/grafana/data/
+*.log
+logs/
+
+# ─────────────────────────────────────────────────────────────
+# Environment Variables
+# ─────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+.env.staging
+.env.test
+
+# ─────────────────────────────────────────────────────────────
+# Jupyter Notebooks
+# ─────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*.ipynb
+!notebooks/*.ipynb
+*.npy
+*.npz
+
+# ─────────────────────────────────────────────────────────────
+# Testing
+# ─────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# ─────────────────────────────────────────────────────────────
+# Coverage Reports
+# ─────────────────────────────────────────────────────────────
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+*.py,cover
+
+# ─────────────────────────────────────────────────────────────
+# Docker
+# ─────────────────────────────────────────────────────────────
+*.pid
+docker-compose.override.yml
+docker-compose.*.override.yml
+.dockerignore
+
+# ─────────────────────────────────────────────────────────────
+# Logs
+# ─────────────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─────────────────────────────────────────────────────────────
+# OS
+# ─────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ─────────────────────────────────────────────────────────────
+# Backups
+# ─────────────────────────────────────────────────────────────
+*.bak
+*.backup
+*.tmp
+*.temp
+*~
+
+# ─────────────────────────────────────────────────────────────
+# Data Files
+# ─────────────────────────────────────────────────────────────
+*.csv
+*.parquet
+*.pkl
+*.pickle
+*.joblib
+data/
+datasets/
+*.h5
+*.hdf5
+*.pth
+*.pt
+*.onnx
+
+# ─────────────────────────────────────────────────────────────
+# Prefect
+# ─────────────────────────────────────────────────────────────
+.prefect/
+prefect.db
+prefect.db.bak
+*.prefect
+
+# ─────────────────────────────────────────────────────────────
+# Prometheus & Grafana
+# ─────────────────────────────────────────────────────────────
+prometheus_data/
+grafana_data/
+monitoring/prometheus/data/
+monitoring/grafana/data/
+
+# ─────────────────────────────────────────────────────────────
+# Secrets
+# ─────────────────────────────────────────────────────────────
+secrets/
+*.secret
+*.key
+*.pem
+*.crt
+*.csr
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.truststore
+
+# ─────────────────────────────────────────────────────────────
+# Terraform
+# ─────────────────────────────────────────────────────────────
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+terraform.tfvars.json
+*.tfplan
+
+# ─────────────────────────────────────────────────────────────
+# Kubernetes
+# ─────────────────────────────────────────────────────────────
+*.kubeconfig
+*.kubeconfig.*
+*.kubeconfig.local
+
+# ─────────────────────────────────────────────────────────────
+# Miscellaneous
+# ─────────────────────────────────────────────────────────────
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.gz
+*.bz2
+*.xz
