@@ -2,20 +2,30 @@
 
 **Production-Ready MLOps Platform for Machine Learning Systems**
 
-![Python](https://img.shields.io/badge/python-3.12+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Docker](https://img.shields.io/badge/docker-ready-blue.svg)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg)
-![MLflow](https://img.shields.io/badge/MLflow-3.x-0194E2.svg)
-![uv](https://img.shields.io/badge/managed%20with-uv-DE5FE9.svg)
-![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF.svg)
+[![Python](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](https://www.docker.com/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg)](https://fastapi.tiangolo.com/)
+[![MLflow](https://img.shields.io/badge/MLflow-3.x-0194E2.svg)](https://mlflow.org/)
+[![uv](https://img.shields.io/badge/managed%20with-uv-DE5FE9.svg)](https://docs.astral.sh/uv/)
+[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF.svg)](https://github.com/features/actions)
+[![Star History](https://img.shields.io/github/stars/your-username/mlops-platform?style=social)](https://github.com/your-username/mlops-platform)
+[![Forks](https://img.shields.io/github/forks/your-username/mlops-platform?style=social)](https://github.com/your-username/mlops-platform)
+
+---
+
+## 🔗 Quick Links
+
+[📖 Documentation](docs/) · [🚀 Quick Start](#-quick-start) · [🎬 Demo](#-demo-previews) · [🐛 Report Bug](https://github.com/your-username/mlops-platform/issues) · [💡 Request Feature](https://github.com/your-username/mlops-platform/issues) · [📄 License](#-license)
 
 ---
 
 ## 📚 Table of Contents
 
 - [🎯 What Is MLOps-Platform?](#-what-is-mlops-platform)
+- [🎯 Why This Platform?](#-why-this-platform)
 - [✨ Key Features](#-key-features)
+- [🎬 Demo Previews](#-demo-previews)
 - [🏗️ System Architecture](#️-system-architecture)
 - [📁 Project Structure](#-project-structure)
 - [🚀 Quick Start](#-quick-start)
@@ -27,7 +37,12 @@
 - [🌐 Deployment](#-deployment)
 - [📚 Documentation](#-documentation)
 - [🔧 Commands](#-commands)
+- [📊 Platform vs Use Case](#-platform-vs-use-case)
 - [📖 What You've Built](#-what-youve-built)
+- [📊 Project Status](#-project-status)
+- [💡 Use Cases](#-use-cases)
+- [📈 How It Scales](#-how-it-scales)
+- [🗺️ Roadmap](#️-roadmap)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 
@@ -54,7 +69,35 @@ This repository implements the platform using the **NYC Taxi Trip Duration** pre
 - A **portfolio** piece showing end-to-end ML engineering
 - A **foundation** to build your own MLOps platform
 
-> 📸 *Add a screenshot or GIF of the Streamlit dashboard / Grafana panel here — nothing sells a project faster than seeing it running.*
+---
+
+## 🎯 Why This Platform?
+
+### The Problem
+
+Most ML projects start great but fail in production because:
+
+- ❌ No standardized way to track experiments
+- ❌ Models are deployed ad-hoc without proper serving infrastructure
+- ❌ No monitoring to detect when models degrade
+- ❌ Reproducibility is an afterthought
+- ❌ Deployment is manual and error-prone
+
+### The Solution
+
+**MLOps-Platform** solves these problems by providing:
+
+| Problem | Solution |
+|---|---|
+| ❌ No experiment tracking | ✅ MLflow tracking and registry |
+| ❌ Ad-hoc model serving | ✅ Standardized FastAPI serving |
+| ❌ No performance monitoring | ✅ Batch scoring with MAE tracking |
+| ❌ No data drift detection | ✅ Evidently drift detection |
+| ❌ No system observability | ✅ Prometheus + Grafana monitoring |
+| ❌ Manual deployments | ✅ CI/CD with GitHub Actions |
+| ❌ No HTTPS | ✅ Let's Encrypt SSL |
+
+**Result:** Deploy new models in minutes, not months. 🚀
 
 ---
 
@@ -73,6 +116,24 @@ This repository implements the platform using the **NYC Taxi Trip Duration** pre
 | **SSL** | Let's Encrypt for HTTPS with auto-renewal |
 | **Production Ready** | Docker, nginx, and VPS deployment |
 | **Reusable Architecture** | Designed to be extensible for any ML problem |
+
+---
+
+## 🎬 Demo Previews
+
+### Streamlit Dashboard
+
+<img src="docs/images/dashboard.gif" alt="Dashboard Demo" width="100%">
+
+*Dashboard showing drift detection, model performance, and batch results*
+
+---
+
+### Grafana Monitoring
+
+<img src="docs/images/grafana.gif" alt="Grafana Demo" width="100%">
+
+*Grafana dashboards showing operational metrics, business metrics, and model performance*
 
 ---
 
@@ -165,6 +226,8 @@ flowchart TD
     class GH,Actions,SSHDeploy,VPS,Compose pipeline
 ```
 
+> *For a deep dive into the architecture, see [ARCHITECTURE.md](docs/ARCHITECTURE.md)*
+
 ---
 
 ## 📁 Project Structure
@@ -220,6 +283,9 @@ mlops-platform/
 │   ├── DEPLOYMENT.md               # Deployment guide
 │   ├── ARCHITECTURE.md             # Architecture deep dive
 │   ├── PLATFORM_GUIDE.md           # How to adapt for new projects
+│   ├── images/                     # Screenshots and diagrams
+│   │   ├── dashboard.gif           # Dashboard demo
+│   │   └── grafana.gif             # Grafana demo
 │   └── ...
 ├── docker-compose.yml              # Local development
 ├── docker-compose.vps.yml          # VPS deployment
@@ -342,6 +408,8 @@ curl "http://localhost:1079/results"
 | **Monitoring Stack** | Prometheus/Grafana are tool-agnostic |
 | **CI/CD Pipeline** | Deployment process is identical |
 | **Docker Setup** | Containerization is standard |
+
+> *For a detailed guide, see [PLATFORM_GUIDE.md](docs/PLATFORM_GUIDE.md)*
 
 ---
 
@@ -749,6 +817,19 @@ rm -rf .venv/                        # Remove virtual environment
 
 ---
 
+## 📊 Platform vs Use Case
+
+| Aspect | Platform | Use Case (TaxiML) |
+|---|---|---|
+| **Purpose** | Reusable MLOps framework | Concrete ML problem |
+| **Scope** | Any ML problem | NYC taxi prediction |
+| **Data** | Generic data pipeline | Taxi trip data |
+| **Model** | Training framework | XGBoost model |
+| **Features** | Feature engineering framework | Taxi-specific features |
+| **Value** | Accelerate new projects | Demonstrate platform |
+
+---
+
 ## 📖 What You've Built
 
 ✅ Production-ready MLOps platform
@@ -787,16 +868,67 @@ rm -rf .venv/                        # Remove virtual environment
 
 ---
 
-## 📊 Platform vs Use Case
+## 📊 Project Status
 
-| Aspect | Platform | Use Case (TaxiML) |
+| Component | Status | Notes |
 |---|---|---|
-| **Purpose** | Reusable MLOps framework | Concrete ML problem |
-| **Scope** | Any ML problem | NYC taxi prediction |
-| **Data** | Generic data pipeline | Taxi trip data |
-| **Model** | Training framework | XGBoost model |
-| **Features** | Feature engineering framework | Taxi-specific features |
-| **Value** | Accelerate new projects | Demonstrate platform |
+| Training Pipeline | ✅ Production Ready | Feature engineering, hyperparameter tuning |
+| Experiment Tracking | ✅ Production Ready | MLflow with model registry |
+| Real-time API | ✅ Production Ready | <100ms latency |
+| Batch Scoring | ✅ Production Ready | With drift detection |
+| Monitoring | ✅ Production Ready | Prometheus + Grafana dashboards |
+| CI/CD | ✅ Production Ready | GitHub Actions |
+| SSL | ✅ Production Ready | Let's Encrypt auto-renewal |
+| Documentation | 🟡 In Progress | Core docs complete, adding more |
+| Tests | 🔜 Coming Soon | Unit and integration tests |
+
+---
+
+## 💡 Use Cases
+
+| Domain | Application |
+|---|---|
+| **E-commerce** | Customer churn prediction, recommendation systems |
+| **Finance** | Credit risk scoring, fraud detection |
+| **Healthcare** | Patient outcome prediction, readmission risk |
+| **Logistics** | Delivery time prediction, route optimization |
+| **Energy** | Demand forecasting, equipment failure prediction |
+| **Marketing** | Lead scoring, customer lifetime value |
+
+**The platform is designed to adapt to any classical ML problem with minimal changes.**
+
+---
+
+## 📈 How It Scales
+
+| Scale | Solution |
+|---|---|
+| **Small (hundreds of requests)** | Single VPS with Docker Compose (default) |
+| **Medium (thousands of requests)** | Horizontal scaling with load balancer |
+| **Large (millions of requests)** | Kubernetes with auto-scaling |
+| **Data Volume (GBs)** | PostgreSQL/MySQL for MLflow |
+| **Artifact Storage (TBs)** | S3/GCS/Azure Blob for MLflow artifacts |
+| **Multi-team** | Separate MLflow experiments per team |
+
+---
+
+## 🗺️ Roadmap
+
+| Feature | Status |
+|---|---|
+| ✅ Complete MLOps pipeline | Done |
+| ✅ Real-time API | Done |
+| ✅ Batch scoring | Done |
+| ✅ Drift detection | Done |
+| ✅ Monitoring stack | Done |
+| ✅ CI/CD | Done |
+| 🔜 Automated retraining | Planned |
+| 🔜 A/B testing | Planned |
+| 🔜 Feature store | Planned |
+| 🔜 Kubernetes support | Planned |
+| 🔜 Model explainability | Planned |
+| 🔜 Automated alerts | Planned |
+| 🔜 Model performance tracking | Planned |
 
 ---
 
@@ -907,3 +1039,7 @@ make clean     # Clean artifacts
 ```
 
 </details>
+
+---
+
+**Star ⭐ this repository if you find it useful!**
